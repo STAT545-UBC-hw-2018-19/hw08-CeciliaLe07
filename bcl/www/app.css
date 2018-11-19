@@ -34,3 +34,19 @@
     border-top: 2px solid #122f7b6e;
     border-left: 2px solid #77777740;
 }
+
+#warning{
+    color: #e00e17e6;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+#continents{
+    margin-top: -24px;
+    margin-bottom: -20px;
+}
+
+#description{
+    color: #2428a2;
+    font-size: 17px;
+}
