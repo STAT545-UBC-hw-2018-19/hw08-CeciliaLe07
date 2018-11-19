@@ -1,0 +1,52 @@
+.skin-blue .main-header .navbar {
+    background-color: #222D32;
+}
+
+.skin-blue .main-header .logo {
+    background-color: #222D32;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+}
+
+.my_div{
+    background: #f9f9f9;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-top: 2px solid #122f7b6e;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 18px;
+}
+.shiny-input-checkboxgroup.shiny-input-container-inline label ~ .shiny-options-group, .shiny-input-radiogroup.shiny-input-container-inline label ~ .shiny-options-group {
+    margin-top: 8px;
+}
+.my_content{
+    background: #F9F9F9;
+    padding: 15px;
+    border-top: 2px solid #77777740;
+    border-left: 2px solid #77777740;
+}
+.my_title{
+    background: #fff;
+    margin-bottom: -5px;
+    padding-bottom: 7px;
+    padding-top: 1px;
+    padding-left: 18px;
+    border-top: 2px solid #122f7b6e;
+    border-left: 2px solid #77777740;
+}
+
+#warning{
+    color: #e00e17e6;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+#continents{
+    margin-top: -24px;
+    margin-bottom: -20px;
+}
+
+#description{
+    color: #2428a2;
+    font-size: 17px;
+}
