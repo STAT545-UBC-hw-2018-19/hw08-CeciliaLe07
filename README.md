@@ -7,7 +7,7 @@ In this repository, you will find all used files to create the [**Happiness Worl
 
 ### The app
 
-This app allows you to explore the dataset [world-happiness](https://www.kaggle.com/unsdsn/world-happiness) by continent, regions, and countries! All along the period from 2015 - 2017, providing you some statistics graphs and dynamic rankings. 
+This app allows you to explore the dataset [world-happiness](https://www.kaggle.com/unsdsn/world-happiness) by continent, regions, and countries! All along the period 2015 - 2017, providing you some statistics graphs and dynamic rankings. 
 
 
 ### Data Sources
@@ -31,7 +31,7 @@ This repository is mainly comprised of the following files:
 
 These are other sources I consulted to get extra help.
 
-+ [Shiny widget gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
++ [Shiny widgets gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 + [Leaflet graphs](https://rstudio.github.io/leaflet/popups.html)
 + [Highcharts graphs](https://api.highcharts.com/highcharts/series)
 + [Deploying shiny apps](http://www.shinyapps.io/)
