@@ -14,7 +14,7 @@ ui <- dashboardPage(
   
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Knowing data", tabName = "data", icon = icon("bar-chart-o")),
+      menuItem("Explore data", tabName = "data", icon = icon("bar-chart-o")),
       menuItem("Ranking", tabName = "rank", icon = icon("chart-line"))
     )
   ),
@@ -24,6 +24,7 @@ ui <- dashboardPage(
       tags$link(rel = "stylesheet", type = "text/css", href = "app.css")
     ),
     tabItems(
+      #Starts tab content
       tabItem(tabName = "rank",
               fluidRow(
                 tags$div(
@@ -75,7 +76,7 @@ ui <- dashboardPage(
                 )
               )
       ),
-      # Second tab content
+      #Starts the other tab content
       tabItem(tabName = "data",
               tags$div(class="my_title", style="background: #F9F9F9;",
                        h2("Welcome to this shiny app!"),
@@ -149,6 +150,7 @@ server <- function(input, output) {
       filter(Continent%in%input$continents&Region!="")
   })
   
+  #Dynamic selectInput with regions acording to selected continents
   output$region <- renderUI({
     
     my_options <- unique(as.character(exploring_data()$Region))
@@ -198,6 +200,7 @@ server <- function(input, output) {
                       filter(Region%in%input$regions) %>% 
                       select(Country,selected_variable)
     
+    #In case the region has less than 8 countries
     local_length <- min(8,dim(data_for_plot)[1])
     sample_index <- sample(1:local_length,local_length,replace=FALSE)
     
@@ -223,6 +226,7 @@ server <- function(input, output) {
                !is.na(longitude)) %>%   
         filter(Continent == input$continent,
                Year == input$year) %>% 
+        #Calculating the rank of selected countries
         mutate(Rank = sort(Score, decreasing = TRUE,index.return = TRUE)$ix)
       
     }else{
@@ -233,6 +237,7 @@ server <- function(input, output) {
   
   output$global_data <- renderLeaflet({
     
+    #Creating the content of the tooltips in graph
     content <- paste0(filtered_data()$Country,
                       "  ",
                       "#",
@@ -254,6 +259,7 @@ server <- function(input, output) {
            filtered_data()$Score) 
   })
   
+  #To avoid an understandable error when input$position is empty
   output$warning <- renderText({
     if(is.na(input$position)){
       "Please choose the number of positions!"
